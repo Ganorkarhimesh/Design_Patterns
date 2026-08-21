@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="Pract4.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1103"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="0" parent="0"/><expanded_item id="1" parent="0"/><expanded_item id="2" parent="0"/><expanded_item id="3" parent="0"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="Faculty" custom_title="0" dock_id="1" table="4,7:mainFaculty"/><dock_state state="000000ff00000000fd00000001000000020000043b000002aefc0100000001fb000000160064006f0063006b00420072006f007700730065003101000000000000043b0000011e00ffffff000002580000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Account Dept" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="62"/><column index="2" value="91"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Faculty" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="62"/><column index="2" value="171"/><column index="3" value="85"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="HR Dept" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="62"/><column index="2" value="84"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="LeaveRequest" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="62"/><column index="2" value="35"/><column index="3" value="78"/><column index="4" value="70"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1*">DELETE FROM &quot;LeaveRequest&quot;;
+DELETE FROM &quot;HR Dept&quot;;
+DELETE FROM &quot;Account Dept&quot;;
+DELETE FROM &quot;Faculty&quot;;
+
+INSERT INTO &quot;Faculty&quot; (&quot;FacultyID&quot;, &quot;Name&quot;, &quot;FacultyType&quot;) VALUES
+(101, 'Alice Smith', 'Permanent'),
+(102, 'Bob Johnson', 'Contract'),
+(103, 'Charlie Brown', 'Permanent'),
+(104, 'Diana Prince', 'Contract'),
+(105, 'Evan Wright', 'Permanent'),
+(106, 'Fiona Gallagher', 'Contract'),
+(107, 'George Clark', 'Permanent'),
+(108, 'Hannah Abbott', 'Contract'),
+(109, 'Ian Malcolm', 'Permanent'),
+(110, 'Julia Roberts', 'Permanent'),
+(111, 'Kevin Bacon', 'Contract'),
+(112, 'Laura Croft', 'Permanent'),
+(113, 'Michael Scott', 'Permanent'),
+(114, 'Nancy Wheeler', 'Contract'),
+(115, 'Oliver Twist', 'Permanent');
+
+INSERT INTO &quot;Account Dept&quot; (&quot;FacultyID&quot;, &quot;Monthly Salary&quot;) VALUES
+(101, 75000),
+(102, 68000),
+(103, 82000),
+(104, 64000),
+(105, 91000),
+(106, 72000),
+(107, 85000),
+(108, 65000),
+(109, 88000),
+(110, 71000),
+(111, 63000),
+(112, 73000),
+(113, 76000),
+(114, 67000),
+(115, 92000);
+
+INSERT INTO &quot;HR Dept&quot; (&quot;FacultyID&quot;, &quot;BalanceLeave&quot;) VALUES
+(101, 12),
+(102, 5),
+(103, 14),
+(104, 3),
+(105, 20),
+(106, 4),
+(107, 15),
+(108, 2),
+(109, 18),
+(110, 7),
+(111, 0),
+(112, 16),
+(113, 11),
+(114, 6),
+(115, 19);
+
+INSERT INTO &quot;LeaveRequest&quot; (&quot;FacultyID&quot;, &quot;Days&quot;, &quot;LeaveType&quot;, &quot;Status&quot;) VALUES
+(101, 3, 'Sick', 'Approved'),
+(102, 2, 'Casual', 'Pending'),
+(103, 5, 'Vacation', 'Approved'),
+(104, 1, 'Sick', 'Rejected'),
+(105, 4, 'Casual', 'Approved'),
+(106, 2, 'Sick', 'Pending'),
+(107, 10, 'Maternity', 'Approved'),
+(108, 3, 'Vacation', 'Approved'),
+(109, 1, 'Casual', 'Rejected'),
+(110, 2, 'Sick', 'Approved'),
+(111, 5, 'Vacation', 'Pending'),
+(112, 3, 'Casual', 'Approved'),
+(113, 2, 'Sick', 'Approved'),
+(114, 4, 'Vacation', 'Approved'),
+(115, 1, 'Casual', 'Rejected');
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
