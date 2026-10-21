@@ -1,0 +1,5 @@
+target/
+data/*.db
+.idea/
+.vscode/
+.DS_Store
