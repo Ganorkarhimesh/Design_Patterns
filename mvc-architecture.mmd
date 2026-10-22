@@ -1,0 +1,11 @@
+flowchart LR
+  V["View<br/>HospitalFrame.java<br/>Java Swing forms and tables"]
+  C["Controller<br/>HospitalController.java<br/>Validation and coordination"]
+  M["Model / DAO<br/>Patient, Appointment, Bill, TreatmentRecord<br/>JDBC DAOs"]
+  DB[("SQLite<br/>data/hospital.db")]
+  V -->|"User actions"| C
+  C -->|"Validated operations"| M
+  M -->|"SQL via JDBC"| DB
+  DB -->|"Rows / results"| M
+  M -->|"Objects / results"| C
+  C -->|"Refresh view"| V
